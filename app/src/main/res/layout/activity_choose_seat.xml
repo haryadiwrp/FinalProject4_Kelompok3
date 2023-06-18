@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseSeat">
+
+    <RelativeLayout
+        android:id="@+id/bagian_atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose seat"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="35dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bagian_atas"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="1"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="A"
+                    android:textAlignment="center"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="B"
+                    android:textAlignment="center"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="C"
+                    android:textAlignment="center"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="D"
+                    android:textAlignment="center"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="1"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/seat_a1"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_b1"
+                    android:clickable="true"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_c1"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_d1"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="98dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="2"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:id="@+id/seat_a2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_b2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_c2"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_d2"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="143dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="3"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/seat_a3"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:id="@+id/seat_b3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_c3"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_d3"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="186dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="4"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/seat_a4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_b4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_c4"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_d4"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="229dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="5"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/seat_a5"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_b5"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_c5"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_d5"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="272dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="6"
+                    android:textColor="#c3c3c3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/seat_a6"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_b6"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_c6"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/img_seat" />
+
+                <ImageView
+                    android:id="@+id/seat_d6"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/img_seat" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_keterangan_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_keterangan_seat"
+        android:layout_above="@id/btn_book_now2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_book_now2"
+        android:layout_width="343dp"
+        android:layout_height="60dp"
+        android:text="book now"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+</RelativeLayout>

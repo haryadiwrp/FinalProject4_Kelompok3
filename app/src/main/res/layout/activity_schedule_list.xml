@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleList"
+    android:background="@color/background_frame">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_arrow"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_bux"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/frame_departure"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/card_style2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btn_back">
+
+        <TextView
+            android:id="@+id/txtDeparture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departure"
+            android:textColor="@color/text_abu"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/kota_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medan"
+            android:textSize="16sp"
+            android:textColor="@color/text_abu"
+            android:textStyle="bold"
+            android:layout_below="@id/txtDeparture"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_dropdown"
+            android:layout_toRightOf="@id/txtDeparture"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_arrival"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/card_style2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btn_back"
+        android:layout_toRightOf="@id/frame_departure">
+
+        <TextView
+            android:id="@+id/txtArrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arrival"
+            android:textColor="@color/text_abu"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/kota_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pekanbaru"
+            android:textColor="@color/text_abu"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtArrival"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_dropdown"
+            android:layout_toRightOf="@id/txtArrival"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_tgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame_departure"
+        android:background="@drawable/card_style2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fri, 23 Jul 2019"
+            android:textColor="@color/text_abu"
+            android:textSize="12sp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame_tgl"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

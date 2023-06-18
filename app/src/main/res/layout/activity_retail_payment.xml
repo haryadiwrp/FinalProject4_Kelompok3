@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RetailPayment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total payment"
+                    android:textColor="@color/text_abu"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/rp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:layout_below="@id/txt"/>
+                <TextView
+                    android:id="@+id/harga_total_bayar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000.000"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:layout_below="@id/txt"
+                    android:layout_toRightOf="@id/rp"/>
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="please select one of the payment method below"
+                    android:textColor="@color/text_abu"
+                    android:textSize="12sp"
+                    android:layout_below="@id/harga_total_bayar5"
+                    android:layout_marginTop="10sp"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/logo_alfamart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/alfamart"
+                    android:layout_marginTop="3dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alfamart"
+                    android:layout_toRightOf="@id/logo_alfamart"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/text_abu"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Ask the cashier for Online payment"
+                    android:layout_below="@id/logo_alfamart"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_abu"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. When you asked what Payment, answer Bux."
+                    android:layout_below="@id/tv1"
+                    android:layout_marginTop="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_abu"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. The cashier will ask what is your booking code. Here is your booking code"
+                    android:layout_below="@id/tv2"
+                    android:layout_marginTop="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_abu"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="230719-0001"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. You’re gonna be charged as much as the total payment. (as you can see in this header)."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_abu"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. Keep the receipt, in case you’re having problem with payment verification."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_abu"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/tv4"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_verifyAlfa"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:text="verify payment"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+</RelativeLayout>

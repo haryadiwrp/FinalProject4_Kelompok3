@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/agent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sempati Star"
+                android:textColor="@color/text_ungu"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.042" />
+
+            <TextView
+                android:id="@+id/code_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P 1923 NM"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.041" />
+
+            <TextView
+                android:id="@+id/timeStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17:35"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.125" />
+
+            <TextView
+                android:id="@+id/terminalStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal Amplas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.125" />
+
+            <TextView
+                android:id="@+id/cityStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.243"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.167" />
+
+            <TextView
+                android:id="@+id/timeArrived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.255" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 166.000,00"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.417" />
+
+            <TextView
+                android:id="@+id/seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/seat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.454" />
+
+            <TextView
+                android:id="@+id/terminalArrived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal Bandaraya"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.255" />
+
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 \n Reviews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.852"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.191" />
+
+            <TextView
+                android:id="@+id/cityArrived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riau"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.215"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.304" />
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="342dp"
+                android:layout_height="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cityArrived"
+                app:layout_constraintVertical_bias="0.057"
+                app:srcCompat="@drawable/new_line" />
+
+            <Button
+                android:id="@+id/btnBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Now"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.786"
+                app:layout_constraintStart_toEndOf="@+id/price"
+                app:layout_constraintTop_toBottomOf="@+id/imageView21"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="55dp"
+                android:layout_height="61dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/review"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/code_bus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/rounded_circle_2" />
+
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.607"
+                app:layout_constraintStart_toEndOf="@+id/code_bus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.111"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/starReview"
+                android:layout_width="64dp"
+                android:layout_height="21dp"
+                android:text="4.9/5"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.947"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView25"
+                app:layout_constraintVertical_bias="0.575" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

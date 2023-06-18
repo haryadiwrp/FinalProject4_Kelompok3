@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/back_arrow"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Your Tickets"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/qrcode_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/qrcode"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parent_passenger_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/book_no_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_layout"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp">
+
+            <TextView
+                android:id="@+id/tglOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 Jul 2019"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/waktuOrder"
+                android:layout_toRightOf="@id/tglOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17:53"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/book_no_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/noBookingDetail"
+                android:text="Book No."
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/noBookingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="230719-0001"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/passenger_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_no_layout">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/rectangle_name"
+                android:layout_width="4dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/rectangle_name" />
+
+            <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@id/rectangle_name"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/text_abu"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/namaPenumpang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/rectangle_name"
+                    android:text="John Doe, 24"
+                    android:textColor="@color/text_abu"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/rounded_circle_2"
+                android:padding="6dp">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/star"
+                    android:layout_marginVertical="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="4.9/5"
+                    android:id="@+id/ratingPerjalanan"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/name_layout"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone number"
+                        android:textColor="@color/text_abu"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08123990823"
+                        android:id="@+id/phoneNumber"
+                        android:textColor="@color/text_abu"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seats"
+                        android:textColor="@color/text_abu"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:id="@+id/jumlahSeat"
+                        android:textColor="@color/text_abu"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ticket Status"
+                        android:textColor="@color/text_abu"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Issued"
+                            android:id="@+id/statuspembayaranDetail"
+                            android:textColor="@color/green"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parent_bus_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parent_passenger_layout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/bus_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/rectangle_bus"
+                android:layout_width="4dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/rectangle8" />
+
+            <LinearLayout
+                android:id="@+id/bus_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@id/rectangle_bus"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bus_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PO Name"
+                    android:textColor="@color/text_abu"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detailBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sempati Star"
+                    android:textColor="@color/text_abu"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bus_no_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bus_no_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bus no."
+                    android:textColor="@color/text_abu"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detailNopol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/rectangle_bus"
+                    android:text="P 1923 NM"
+                    android:layout_marginRight="45dp"
+                    android:textColor="@color/text_abu"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/schedule_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:textSize="12dp"
+                android:textColor="@color/text_abu"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/bus_layout"/>
+
+            <TextView
+                android:id="@+id/departure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="17:35"
+                android:textSize="14dp"
+                android:textColor="@color/text_abu"
+                android:textStyle="bold"
+                android:layout_marginLeft="40dp"
+                android:layout_below="@id/schedule_textview"/>
+
+            <LinearLayout
+                android:id="@+id/dots"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/departure_time"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dot1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/text_abu"
+
+                    android:layout_below="@id/departure_time"/>
+
+                <TextView
+                    android:id="@+id/dot2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/text_abu"
+
+                    android:layout_below="@id/detailBus"/>
+
+                <TextView
+                    android:id="@+id/dot3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/text_abu"
+                    android:layout_below="@id/detailBus"/>
+
+                <TextView
+                    android:id="@+id/dot4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/text_abu"
+                    android:layout_below="@id/detailBus"/>
+
+                <TextView
+                    android:id="@+id/dot5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/text_abu"
+                    android:layout_below="@id/detailBus"/>
+
+                <TextView
+                    android:id="@+id/dot6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/text_abu"
+                    android:layout_below="@id/detailBus"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/arrival_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:10"
+                android:textSize="14dp"
+                android:textColor="@color/text_abu"
+                android:layout_marginLeft="40dp"
+                android:textStyle="bold"
+                android:layout_below="@id/dots"/>
+
+            <LinearLayout
+                android:id="@+id/departure_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dots"
+                android:layout_marginTop="115dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MEDAN"
+                    android:id="@+id/detailKotaAwal"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terminal Amplas"
+                    android:id="@+id/detailTerminalAwal"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23 Jul 2019"
+                    android:id="@+id/tglBerangkat"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/arrival_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dots"
+                android:layout_below="@id/departure_layout"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PEKANBARU"
+                    android:id="@+id/kotaTujuan"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terminal Bandaraya"
+                    android:id="@+id/terminalTujuan"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24 Jul 2019"
+                    android:id="@+id/waktuTiba"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/estimated_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/bus_no_layout"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated time"
+                    android:textColor="@color/text_abu"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13h45m"
+                    android:id="@+id/waktuPerjalanan"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seat_no_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/estimated_time_layout"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="75dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seat No."
+                    android:textColor="@color/text_abu"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/noSeat"
+                    android:layout_height="wrap_content"
+                    android:text="9, 10"
+                    android:textColor="@color/text_abu"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_1"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/arrival_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp332.333,00"
+                    android:textColor="@color/text_abu"
+                    android:id="@+id/hargaTotal"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

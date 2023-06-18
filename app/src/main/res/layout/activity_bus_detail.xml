@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusDetail">
+
+    <RelativeLayout
+        android:id="@+id/bagian_atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book a trip"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="35dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/bagian_atas"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_foto_bus"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/card_style2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="205dp"
+                android:elevation="10dp">
+
+                <TextView
+                    android:id="@+id/nama_bus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Nama Bus"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_star2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/nama_bus"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4/5"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/star"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/kota_asal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kota"
+                android:textAllCaps="true"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/foto"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:id="@+id/jam_asal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/kota_asal"
+                android:layout_marginTop="1dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/durasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="durasi"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"
+                android:layout_below="@id/foto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_line5"
+                android:layout_below="@id/durasi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/kota_sampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kota"
+                android:textAllCaps="true"
+                android:layout_alignRight="@id/foto"
+                android:layout_below="@id/foto"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:id="@+id/jam_sampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_alignRight="@id/foto"
+                android:layout_below="@id/kota_sampai"
+                android:layout_marginTop="1dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/jam_asal"
+                android:layout_marginTop="7dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/tgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 Jul 2019"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/txt_date"
+                android:layout_marginTop="1dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/txt_busno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus No."
+                android:layout_alignRight="@id/foto"
+                android:layout_below="@id/jam_sampai"
+                android:layout_marginTop="7dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/nopol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B 0000 XX"
+                android:layout_alignRight="@id/foto"
+                android:layout_below="@id/txt_busno"
+                android:layout_marginTop="1dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/txt_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Seat"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/tgl"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/jumlah_seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 seat are available"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/txt_available"
+                android:layout_marginTop="1dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/seat_arrangement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2x2 Seats arrangement"
+                android:layout_alignRight="@id/foto"
+                android:layout_below="@id/txt_available"
+                android:layout_marginTop="1dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/txt_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/jumlah_seat"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/class_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Economy Class"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/txt_class"
+                android:layout_marginTop="1dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/txt_facility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facility"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/class_bus"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"/>
+
+            <ImageView
+                android:id="@+id/icon_toilet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_toilet"
+                android:layout_below="@id/txt_facility"
+                android:layout_alignLeft="@id/foto"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/txt_toilet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toilet"
+                android:layout_toRightOf="@id/icon_toilet"
+                android:layout_below="@id/txt_facility"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <ImageView
+                android:id="@+id/icon_reststop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_reststop"
+                android:layout_below="@id/icon_toilet"
+                android:layout_alignLeft="@id/foto"
+                android:layout_marginTop="11dp"/>
+
+            <TextView
+                android:id="@+id/txt_reststop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rest Stop"
+                android:layout_toRightOf="@id/icon_reststop"
+                android:layout_below="@id/txt_toilet"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <TextView
+                android:id="@+id/txt_luggage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luggage"
+                android:layout_below="@id/txt_facility"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignRight="@id/foto"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <ImageView
+                android:id="@+id/icon_luggage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_luggage"
+                android:layout_below="@id/txt_facility"
+                android:layout_toLeftOf="@id/txt_luggage"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/txt_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC"
+                android:layout_below="@id/txt_luggage"
+                android:layout_marginTop="5dp"
+                android:layout_alignLeft="@id/txt_luggage"
+                android:textSize="14sp"
+                android:textColor="@color/text_abu"/>
+
+            <ImageView
+                android:id="@+id/icon_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_ac"
+                android:layout_below="@id/icon_luggage"
+                android:layout_toLeftOf="@id/txt_luggage"
+                android:layout_marginTop="11dp"/>
+
+            <TextView
+                android:id="@+id/txt_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:layout_alignLeft="@id/foto"
+                android:layout_below="@id/icon_ac"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_abu"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/txt_review"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_style"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="100dp"
+                android:elevation="100dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/nama_reviewer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alifia"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_abu"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:text="pretty good, this bus serve very well. drivers and staffs are friendly."
+                        android:textSize="12sp"
+                        android:textColor="@color/text_abu"
+                        android:layout_below="@id/nama_reviewer"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bagian_bawah"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="150dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="15dp">
+        <TextView
+            android:id="@+id/jumlah_penumpang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/text_abu"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:layout_toRightOf="@id/jumlah_penumpang"
+            android:textColor="@color/text_abu"
+            android:textSize="12sp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"/>
+
+        <TextView
+            android:id="@+id/harga_bus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="166000"
+            android:textColor="@color/text_abu"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/x"/>
+
+        <TextView
+            android:id="@+id/rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp"
+            android:textColor="@color/purple_500"
+            android:textStyle="bold"
+            android:layout_below="@id/jumlah_penumpang"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/harga_bus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="332000"
+            android:textColor="@color/purple_500"
+            android:textStyle="bold"
+            android:layout_below="@id/jumlah_penumpang"
+            android:layout_toRightOf="@id/rp"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/btn_bookNow"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:text="book now"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>

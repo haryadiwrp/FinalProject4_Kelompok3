@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222275256937",
+    "project_id": "prepare-fp3",
+    "storage_bucket": "prepare-fp3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222275256937:android:73f6f635e52326d169d8f8",
+        "android_client_info": {
+          "package_name": "com.hacktiv8.prepare_fp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222275256937-am3cpqa9d42sb2cjrmpmgd0ps6ft0phj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMpj5oexjEQHm2lD80t52Lrgefm8WyH0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222275256937-am3cpqa9d42sb2cjrmpmgd0ps6ft0phj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
